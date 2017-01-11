@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<configuration>
+    <zoomscale>50000</zoomscale>
+    <shareresults>true</shareresults>
+    <layers>
+        <layer>
+            <name>wilayat Search</name>
+            <url>http://localhost:6080/arcgis/rest/services/ALDakhilya_governorate/MapServer/2</url>
+            <expression>eventtype = '[value]'</expression>
+            <textsearchlabel>Select by name</textsearchlabel>
+            <titlefield>WILAYAT__1</titlefield>
+            <fields>
+                <field name="WILAYAT__1" alias="WILAYAT__1"/>
+            </fields>
+            <useproxy>true</useproxy>
+            <orderbyfields>WILAYAT__1 ASC</orderbyfields>
+        </layer>
+    </layers>
+</configuration>
