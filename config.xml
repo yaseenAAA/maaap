@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<configuration>
+    <title>AL-Dakhilya GIS Application</title>
+    <logo>assets/images/gh.png</logo>
+    <style>
+        <colors>0xcee7f4,0x39628c,0x355d89,0x294867,0xcee7f4</colors>
+        <alpha>0.73</alpha>
+        <font name="Verdana"/>
+        <titlefont name="Verdana"/>
+        <subtitlefont name="Yu Gothic UI"/>
+    </style>
+    <!-- replace the following url with your own geometryservice -->
+    <geometryservice url="http://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer"/>
+    <subtitle>Production by: Yaseen AL-sulimani -  SQU.GIS</subtitle>
+    <widget url="widgets/Navigation/NavigationWidget.swf" config="widgets/Navigation/NavigationWidget.xml" left="10" top="50"/>
+    <widget url="widgets/OverviewMap/OverviewMapWidget.swf" config="widgets/OverviewMap/OverviewMapWidget.xml" right="0" bottom="0"/>
+    <widget url="widgets/MapSwitcher/MapSwitcherWidget.swf" config="widgets/MapSwitcher/MapSwitcherWidget.xml" right="20" top="55"/>
+    <widget url="widgets/HeaderController/HeaderControllerWidget.swf" config="widgets/HeaderController/HeaderControllerWidget.xml" left="0" top="0"/>
+    <widget url="widgets/Coordinate/CoordinateWidget.swf" config="widgets/Coordinate/CoordinateWidget.xml" label="Coordinate" left="3" bottom="1"/>
+    <widget url="widgets/Splash/SplashWidget.swf" config="widgets/Splash/SplashWidget.xml" label="Splash"/>
+    <map attributionvisible="true" esrilogovisible="true" openhandcursorvisible="false" scalebarvisible="true" scalebar="default" zoomslidervisible="false" wraparound180="true" addarcgisbasemaps="true" initialextent="4867512.87463877 1860168.037700945 7795356.8060733825 3039132.76197119" wkid="102100" top="40" portalurl="https://www.arcgis.com/">
+        <basemaps>
+            <layer type="osm" label="OpenStreetMap" visible="true" showinlegend="false"/>
+            <layer type="tiled" label="World Imagery" icon="https://www.arcgis.com/sharing/rest/content/items/10df2279f9684e4a9f6a7f08febac2a9/info/thumbnail/ago_downloaded.jpg" url="https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer" visible="false"/>
+            <layer type="tiled" label="National Geographic World Map" icon="https://www.arcgis.com/sharing/rest/content/items/b9b1b422198944fbbd5250b3241691b6/info/thumbnail/ago_downloaded.jpg" url="https://services.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer" visible="false"/>
+        </basemaps>
+        <operationallayers>
+            <layer type="feature" label="pop settlment" url="http://localhost:6080/arcgis/rest/services/ALDakhilya_governorate/MapServer/0" mode="onDemand" visible="true"/>
+            <layer type="feature" label="road" url="http://localhost:6080/arcgis/rest/services/ALDakhilya_governorate/MapServer/1" mode="onDemand" visible="true"/>
+            <layer type="feature" label="region" url="http://localhost:6080/arcgis/rest/services/ALDakhilya_governorate/MapServer/2" mode="onDemand" visible="true"/>
+        </operationallayers>
+    </map>
+    <widgetcontainer layout="float">
+        <widget url="widgets/Draw/DrawWidget.swf" config="widgets/Draw/DrawWidget.xml" label="Draw" icon="assets/images/i_draw2.png"/>
+        <widget url="widgets/Print/PrintWidget.swf" config="widgets/Print/PrintWidget.xml" label="Print" icon="assets/images/i_print.png"/>
+        <widget url="widgets/Geoprocessing/GeoprocessingWidget.swf" config="widgets/Geoprocessing/GeoprocessingWidget_2.xml" label="Buffer settlments" icon="assets/images/i_widget.png"/>
+        <widget url="widgets/Search/SearchWidget.swf" config="widgets/Search/SearchWidget_2.xml" label="Search" icon="assets/images/i_search.png"/>
+    </widgetcontainer>
+    <widgetcontainer paneltype="bottom" initialstate="open">
+        <widget url="widgets/AttributeTable/AttributeTableWidget.swf" config="widgets/AttributeTable/AttributeTableWidget.xml" label="Attribute Table" icon="assets/images/TableOpen32.png"/>
+    </widgetcontainer>
+</configuration>
