@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Msg time='2017-01-08T13:20:00,165' type='SEVERE' code='10837' target='ALDakhilya_governorate.MapServer' methodName='MapServer.Query' machine='DESKTOP-NVTI6ND' process='4452' thread='1772' user='anonymous' >Geodatabase error: An expected Field was not found or could not be retrieved properly.  An expected Field was not found or could not be retrieved properly. [region].</Msg>
